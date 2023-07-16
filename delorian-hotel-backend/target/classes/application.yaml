@@ -1,0 +1,24 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null
+  datasource:
+    url: jdbc:mysql://rasc.mysql.database.azure.com:3306/delorian_hotel?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+    username: innocode_rasc
+    password: Rasc_062301
+  jpa :
+    database-platform : org.springframework.orm.jpa.vendor.Database.MYSQL
+    generate-ddl : true
+    show-sql : true
+    hibernate :
+      ddl-auto : update
+    properties :
+      hibernate :
+        type :
+          preferred_instant_jdbc_type: TIMESTAMP
+        globally_quoted_identifiers : true
+        dialect : org.hibernate.dialect.MySQLDialect
+        format_sql : true
+
+    #url: jdbc:mysql://db4free.net:3306/hotelsystem
+    #username: hotel_system
+    #password: f8290252
